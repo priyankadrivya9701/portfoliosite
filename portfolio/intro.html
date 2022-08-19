@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/a06ae457f8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="sidebar sidebarGo">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a
+                            href="intro.html">Introduction</a>
+                    </li>
+                    <li><a href="services.html">Services</a>
+                    </li>
+                    <li><a href="contact.html">Contact
+                            Me</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="Main">
+            <div class="hamburger">
+                <div class="ham"><i class="fa-solid fa-bars"></i></div>
+                <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="infocontainer">
+                <h1>ABOUT ME</h1>
+                <p>Hello, my name is <b>Priyanka Rout</b>, I am a 4th year B.Tech Computer Science student at National
+                    Institute
+                    of Science and Technology.My goal is to build a successful career as an <b>Software Engineer</b>,
+                    which can help the company and me personally. My primary interest lies in the field of Frontend
+                    Development. As a result of my Love towards Web Development I have done a project on <b>Online
+                        Voting System</b> During my project, I worked as a Team leader as well as a Team player, and by
+                    doing so, I ensured the proper completion of work by team members. Other than
+                    reading extensively on the subject and tinkering with websites of various sizes, I love to travel,
+                    art , playing badminton and explore new things and skills.
+                </p>
+                <div class="tab-titles">
+                    <div class="tab-links active-link" onclick="opentab('language')">LANGUAGE</div>
+                    <div class="tab-links" onclick="opentab('skills')">SKILLS</div>
+                    <div class="tab-links" onclick="opentab('education')">EDUCATION</div>
+                </div>
+                <div class="tab-contents active-tab" id="language">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>BASIC JAVA</li>
+                        <li>PYTHON</li>
+                        <li>SQL</li>
+                        <li>DATA STRUCTURE</li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li>PROBLEM SOLVING SKILL</li>
+                        <li>ATTENTION TO DETAILS</li>
+                        <li>CREATIVE THINKER</li>
+                        <li>EMOTIONAL INTELLIGENCE </li>
+                        <li>TEAM MANAGEMENT</li>
+                        <li>COMMUNICATION SKILLS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B-TECH, Computer Science Engineering</span><br>National Institute of Science and
+                            Technology<br>2019-23</li>
+                        <li><span>12th (Senior Secondary Examination)</span><br>Vyomayana Samstha Vidyalaya,Koraput,
+                            Odisha<br>2018-19<br>CBSE</li>
+                        <li><span>10th (Secondary Examination)</span><br>Vyomayana Samstha Vidyalaya,Koraput,
+                            Odisha<br>2017-18<br>CBSE
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script src="java.js"></script>
+</body>
+
+</html>
